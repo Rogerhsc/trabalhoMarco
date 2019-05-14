@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/homePage.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Home Page</title>
+</head>
+
+<body>
+        <div class="container-fluid">
+            <div class="pos-f-t">
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <h5 class="text-white h4">Carrinho</h5>
+                        <span class="text-muted">Seus Itens</span>
+                        <table class="table table-dark" id="carrinho" name="dadosVenda">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Descricao</th>
+                                    <th scope="col">Valor</th>
+                                    <th scope="col">Quantidade</th>
+                                    <th scope="col">Acao</th>
+                                </tr>
+                            </thead>
+                            <tbody id="carrinhoBody">
+                            </tbody>
+                        </table>
+                        <button class="btn btn-success" onclick="salvarVenda()">Finalizar</button>
+                    </div>
+                </div>
+                <nav class="navbar navbar-dark bg-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Alterna navegacao">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <label id="descItemLabel" style="color: white">----------</label>
+                    <label  style="color: white">R$ <b id="vlrTotalLabel">0</b></label>
+                </nav>
+
+            </div>
+            <div class="listaProdutos">
+                <div class="produtos">
+                    <div class="image">
+                        <img width="295" height="200" src="images/batata.jpg">
+                    </div>
+                    <div class="desc">
+                        <div class="txtDesc">
+                            <p id="nome_item">Batata</p>
+                            <p id="qtd_disponivel">QTD: 10</p>
+
+                            <p>
+                                <label for="qtd_item">
+                                    Levar: 
+                                </label>
+                            <select id="qtd_item">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            </p>
+                            <p id="valor_item">R$ 50,00</p>
+                        </div>
+                        <div class="btnPlus">
+                            <a class="iconPlus" onclick="inserirCarrinho(0)">
+                                <img src="images/add.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produtos">
+                    <div class="image">
+                        <img width="295" height="200" src="images/tomate.jpg">
+                    </div>
+                    <div class="desc">
+                        <div class="txtDesc">
+                            <p id="nome_item">Tomate</p>
+                            <p id="qtd_disponivel">QTD: 10</p>
+
+                            <p>
+                                <label for="qtd_item">
+                                    Levar: 
+                                </label>
+                            <select id="qtd_item">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            </p>
+                            <p id="valor_item">R$ 50,00</p>
+                        </div>
+                        <div class="btnPlus" onclick="inserirCarrinho(1)">
+                            <a class="iconPlus">
+                                <img src="images/add.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produtos">
+                    <div class="image">
+                        <img width="295" height="200" src="images/tomate.jpg">
+                    </div>
+                    <div class="desc">
+                        <div class="txtDesc">
+                            <p id="nome_item">Tomate</p>
+                            <p id="qtd_disponivel">QTD: 10</p>
+
+                            <p>
+                                <label for="qtd_item">
+                                    Levar: 
+                                </label>
+                            <select id="qtd_item">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            </p>
+                            <p id="valor_item">R$ 25,00</p>
+                        </div>
+                        <div class="btnPlus">
+                            <a class="iconPlus" onclick="inserirCarrinho(2)">
+                                <img src="images/add.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
+
+<style>
+    .listaProdutos {
+        display: inline;
+        width: 90%;
+        height: 90%;
+        border: 1px black solid;
+    }
+
+    .produtos {
+        border: 2px solid #d9d9d9;
+        width: 300px;
+        height: 450px;
+        margin: 25px;
+        margin-top: 50px;
+        position: relative;
+        display: block;
+        float: left;
+    }
+
+    .produtos:hover {
+        border-color: #4da6ff;
+    }
+
+    .desc {
+        display: inline-block;
+        width: 100%;
+        height: 40%;
+    }
+
+    .txtDesc {
+        text-align: center;
+        justify-content: center;
+        color: black;
+        font-size: 20px;
+        width: 70%;
+        height: 100%;
+        float: left;
+    }
+
+    .btnPlus {
+        width: 30%;
+        height: 100%;
+        float: left;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    .image {
+        border-bottom: 1px solid #d9d9d9;
+        width: 100%;
+        height: 60%;
+    }
+
+    .iconPlus {
+        cursor: pointer;
+        opacity: 0.3;
+        width: 60%;
+        height: 50%;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    .iconPlus:hover {
+        opacity: 1;
+    }
+
+    .footer {
+        width: 100%;
+        height: 80px;
+        bottom: 0;
+        position: fixed;
+
+        border: 1px black solid;
+    }
+</style>
